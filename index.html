@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Date-A-Base</title>
+    <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+  </style>
 </head>
-<body>
+<body class="section has-background-dark">
+  <div class="container">
+  <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
+  </div>
+  <div class="container">
+  <p class="sub-title is-size-4 has-text-white">Time to <span class="has-text-weight-bold has-text-danger-dark">SPICE</span> up your date nights! 🕺✨</p>
+  </div>
+  <main class="column-md container">  
+
     
-<h1>Date-A-Base</h1>
-<p>Time to spice up your date nights! 🕺✨</p>
+    <form id="movie-genres" class="notification is-link">
+        <label for="movie-genres" >Choose A Genre:</label>
+        <select id="genres" name="genres" class="dropdown-content">
 
-    <form id="movie-genres">
-        <label for="movie-genres">Choose A Genre:</label>
-        <select id="genres" name="genres">
-
-          <option value="Animation">Animation</option>
+          <option value="Animation" >Animation</option>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
           <option value="Biography">Biography</option>
@@ -38,9 +51,9 @@
 
 
 
-    <form id="alcoholic-beverages">
+    <form id="alcoholic-beverages" class="notification is-warning">
         <label for="alcoholic-beverages">Choose A Drink:</label>
-        <select id="alcoholic-beverages" name="drinks">
+        <select id="alcoholic-beverages" name="drinks" class="dropdown-content">
 
           <option value="Absinthe">Absinthe</option>
           <option value="Beer">Beer</option>
@@ -64,9 +77,9 @@
 
 
 
-    <form id="cuisines">
+    <form id="cuisines" class="notification is-success">
         <label for="cuisines">Choose A Cuisine:</label>
-        <select id="cuisines" name="cuisines">
+        <select id="cuisines" name="cuisines" class="dropdown-content">
 
           <option value ="African">African</option>
           <option value="American">American</option>
@@ -96,10 +109,9 @@
         </select>
     </form>
 
-
-    <input type="submit">
-    <button>Randomize</button>
-
+    <input class="button is-rounded m-2" type="submit">
+    <button class="button is-rounded m-2">Randomize</button>
+  </main>
 
 
 
