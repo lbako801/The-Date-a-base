@@ -14,16 +14,17 @@
     }
   </style>
 </head>
+
 <body class="section has-background-dark">
   <div class="container">
   <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
   </div>
   <div class="container">
   <p class="sub-title is-size-4 has-text-white">Time to <span class="has-text-weight-bold has-text-danger-dark">SPICE</span> up your date nights! 🕺✨</p>
-  </div>
+   </div>
   <main class="column-md container">  
 
-    
+   
     <form id="movie-genres" class="notification is-link">
         <label for="movie-genres" >Choose A Genre:</label>
         <select id="genres" name="genres" class="dropdown-content">
@@ -51,7 +52,7 @@
 
 
 
-    <form id="alcoholic-beverages" class="notification is-warning">
+    <form id="drinkChoice" class="notification is-warning">
         <label for="alcoholic-beverages">Choose A Drink:</label>
         <select id="alcoholic-beverages" name="drinks" class="dropdown-content">
 
@@ -73,9 +74,8 @@
           <option value="Whiskey">Whiskey</option>
           <option value="Wine">Wine</option>
         </select>
+        <input class="button is-rounded m-2" type="submit">
     </form>
-
-
 
     <form id="cuisines" class="notification is-success">
         <label for="cuisines">Choose A Cuisine:</label>
@@ -107,16 +107,12 @@
           <option value="Thai">Thai</option>
           <option value ="Vietnamese">Vietnamese</option>
         </select>
+        
     </form>
 
     <input class="button is-rounded m-2" type="submit">
     <button class="button is-rounded m-2">Randomize</button>
   </main>
-
-
-
-
-
-
+<script src="./assets/script.js"></script>
 </body>
 </html>
