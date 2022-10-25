@@ -24,10 +24,9 @@
    </div>
   <main class="column-md container">  
 
-   
-    <form id="movie-genres" class="notification is-link">
+    <form id="choices" class="notification is-link">
         <label for="movie-genres" >Choose A Genre:</label>
-        <select id="genres" name="genres" class="dropdown-content">
+        <select id="moviegenres" name="genres" class="dropdown-content">
 
           <option value="Animation" >Animation</option>
           <option value="Action">Action</option>
@@ -48,18 +47,15 @@
           <option value="War">War</option>
           <option value="Western">Western</option>
         </select>
-    </form>
-
-
-
-    <form id="drinkChoice" class="notification is-warning">
+    
         <label for="alcoholic-beverages">Choose A Drink:</label>
-        <select id="alcoholic-beverages" name="drinks" class="dropdown-content">
+        <select id="drinks" name="drinks" class="dropdown-content">
 
-          <option value="Absinthe">Absinthe</option>
-          <option value="Beer">Beer</option>
+          <option value="Amaretto">Amaretto</option>
+          <option value="Bourbon">Bourbon</option>
           <option value="Brandy">Brandy</option>
           <option value="Champagne">Champagne</option>
+          <option value="Cognac">Cognac</option>
           <option value="Everclear">Everclear</option>
           <option value="Gin">Gin</option>
           <option value="Hard Cider">Hard Cider</option>
@@ -67,20 +63,15 @@
           <option value="Martini">Martini</option>
           <option value="Mead">Mead</option>
           <option value="Rum">Rum</option>
-          <option value="Sake">Sake</option>
+          <option value="Scotch">Scotch</option>
+          <option value="Spiced Rum">Spiced Rum</option>
           <option value="Tequila">Tequila</option>
-          <option value="Vermouth">Vermouth</option>
           <option value="Vodka">Vodka</option>
           <option value="Whiskey">Whiskey</option>
-          <option value="Wine">Wine</option>
         </select>
-        <input class="button is-rounded m-2" type="submit">
-    </form>
-
-    <form id="cuisines" class="notification is-success">
+  
         <label for="cuisines">Choose A Cuisine:</label>
         <select id="cuisines" name="cuisines" class="dropdown-content">
-
           <option value ="African">African</option>
           <option value="American">American</option>
           <option value ="British">British</option>
@@ -107,10 +98,10 @@
           <option value="Thai">Thai</option>
           <option value ="Vietnamese">Vietnamese</option>
         </select>
-        
+        <input class="button is-rounded m-2" type="submit">
     </form>
 
-    <input class="button is-rounded m-2" type="submit">
+    
     <button class="button is-rounded m-2">Randomize</button>
   </main>
 <script src="./assets/script.js"></script>
