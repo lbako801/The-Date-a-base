@@ -15,6 +15,10 @@ choicesEl.addEventListener("submit", function (event) {
     console.log(genreChoiceEl.value);
     console.log(drinkChoiceEl.value);
     console.log(cuisineChoiceEl.value);
+//Below window commands set the user choices to local storage.
+    window.localStorage.setItem('User Genre', genreChoiceEl.value)
+    window.localStorage.setItem('User Drink', drinkChoiceEl.value)
+    window.localStorage.setItem('User Cuisine',cuisineChoiceEl.value)
 });
 
 // Below variable attaches HTML randomize button to js variable.
@@ -49,4 +53,8 @@ randomButton.addEventListener('click', function (event) {
     console.log(randomCuisine);
 
     for (let i = 0; i < cuisineOptions.length; i++) { }
+//Below window commands set selected random values to local storage
+    window.localStorage.setItem('Random Cuisine', randomCuisine)
+    window.localStorage.setItem('Random Drink', randomDrink)
+    window.localStorage.setItem('Random Movie Genre', randomGenre)
 })
