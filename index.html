@@ -1,109 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <title>Date-A-Base</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <title>Date-A-Base 💝</title>
     <style>
-    .container {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-    }
-  </style>
-</head>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+    </style>
+  </head>
 
-<body class="section has-background-dark">
-  <div class="container">
-  <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
-  </div>
-  <div class="container">
-  <p class="sub-title is-size-4 has-text-white">Time to <span class="has-text-weight-bold has-text-danger-dark">SPICE</span> up your date nights! 🕺✨</p>
-   </div>
-  <main class="column-md container">  
-
-    <form id="choices" class="notification is-link">
-        <label for="movie-genres" >Choose A Genre:</label>
-        <select id="moviegenres" name="genres" class="dropdown-content">
-
-          <option value="Animation" >Animation</option>
-          <option value="Action">Action</option>
-          <option value="Adventure">Adventure</option>
-          <option value="Biography">Biography</option>
-          <option value="Comedy">Comedy</option>
-          <option value="Crime">Crime</option>
-          <option value="Drama">Drama</option>
-          <option value="Documentary">Documentary</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="Historical">Historical</option>
-          <option value="Horror">Horror</option>
-          <option value="Musical">Musical</option>
-          <option value="Mystery">Mystery</option>
-          <option value="Romance">Romance</option>
-          <option value="Sci-Fi">Sci-Fi</option>
-          <option value="Thriller">Thriller</option>
-          <option value="War">War</option>
-          <option value="Western">Western</option>
+  <body class="section has-background-dark">
+    <div class="container">
+      <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
+    </div>
+    <div class="container">
+      <p class="sub-title is-size-4 has-text-white">
+        Time to
+        <span class="has-text-weight-bold has-text-danger-dark">SPICE</span> up
+        your date nights! 🕺✨
+      </p>
+    </div>
+    <main class="column-md container">
+      <form id="choices" class="notification is-link">
+        <label for="movie-genres">Choose A Genre:</label>
+        <select id="genreList" name="genres" class="dropdown-content">
+          <option class="genreOption" value="Animation">Animation</option>
+          <option class="genreOption" value="Action">Action</option>
+          <option class="genreOption" value="Adventure">Adventure</option>
+          <option class="genreOption" value="Biography">Biography</option>
+          <option class="genreOption" value="Comedy">Comedy</option>
+          <option class="genreOption" value="Crime">Crime</option>
+          <option class="genreOption" value="Drama">Drama</option>
+          <option class="genreOption" value="Documentary">Documentary</option>
+          <option class="genreOption" value="Fantasy">Fantasy</option>
+          <option class="genreOption" value="Historical">Historical</option>
+          <option class="genreOption" value="Horror">Horror</option>
+          <option class="genreOption" value="Musical">Musical</option>
+          <option class="genreOption" value="Mystery">Mystery</option>
+          <option class="genreOption" value="Romance">Romance</option>
+          <option class="genreOption" value="Sci-Fi">Sci-Fi</option>
+          <option class="genreOption" value="Thriller">Thriller</option>
+          <option class="genreOption" value="War">War</option>
+          <option class="genreOption" value="Western">Western</option>
         </select>
-    
+
         <label for="alcoholic-beverages">Choose A Drink:</label>
         <select id="drinks" name="drinks" class="dropdown-content">
-
-          <option value="Amaretto">Amaretto</option>
-          <option value="Bourbon">Bourbon</option>
-          <option value="Brandy">Brandy</option>
-          <option value="Champagne">Champagne</option>
-          <option value="Cognac">Cognac</option>
-          <option value="Everclear">Everclear</option>
-          <option value="Gin">Gin</option>
-          <option value="Hard Cider">Hard Cider</option>
-          <option value="Liquor">Liquor</option>
-          <option value="Martini">Martini</option>
-          <option value="Mead">Mead</option>
-          <option value="Rum">Rum</option>
-          <option value="Scotch">Scotch</option>
-          <option value="Spiced Rum">Spiced Rum</option>
-          <option value="Tequila">Tequila</option>
-          <option value="Vodka">Vodka</option>
-          <option value="Whiskey">Whiskey</option>
+          <option class="drinkOption" value="Amaretto">Amaretto</option>
+          <option class="drinkOption" value="Bourbon">Bourbon</option>
+          <option class="drinkOption" value="Brandy">Brandy</option>
+          <option class="drinkOption" value="Champagne">Champagne</option>
+          <option class="drinkOption" value="Cognac">Cognac</option>
+          <option class="drinkOption" value="Everclear">Everclear</option>
+          <option class="drinkOption" value="Gin">Gin</option>
+          <option class="drinkOption" value="Hard Cider">Hard Cider</option>
+          <option class="drinkOption" value="Liquor">Liquor</option>
+          <option class="drinkOption" value="Martini">Martini</option>
+          <option class="drinkOption" value="Mead">Mead</option>
+          <option class="drinkOption" value="Rum">Rum</option>
+          <option class="drinkOption" value="Scotch">Scotch</option>
+          <option class="drinkOption" value="Spiced Rum">Spiced Rum</option>
+          <option class="drinkOption" value="Tequila">Tequila</option>
+          <option class="drinkOption" value="Vodka">Vodka</option>
+          <option class="drinkOption" value="Whiskey">Whiskey</option>
         </select>
-  
+
         <label for="cuisines">Choose A Cuisine:</label>
         <select id="cuisines" name="cuisines" class="dropdown-content">
-          <option value ="African">African</option>
-          <option value="American">American</option>
-          <option value ="British">British</option>
-          <option value="Cajun">Cajun</option>
-          <option value="Caribbean">Caribbean</option>
-          <option value="Chinese">Chinese</option>
-          <option value="Eastern European">Eastern European</option>
-          <option value="French">French</option>
-          <option value="German">German</option>
-          <option value="Greek">Greek</option>
-          <option value="Indian">Indian</option>
-          <option value="Irish">Irish</option>
-          <option value ="Italian">Italian</option>
-          <option value="Japanese">Japanese</option>
-          <option value ="Jewish">Jewish</option>
-          <option value="Korean">Korean</option>
-          <option value="Latin American">Latin American</option>
-          <option value ="Mediterranean">Mediterranean</option>
-          <option value="Mexican">Mexican</option>
-          <option value="Middle Eastern">Middle Eastern</option>
-          <option value ="Nordic">Nordic</option>
-          <option value ="Southern">Southern</option>
-          <option value ="Spanish">Spanish</option>
-          <option value="Thai">Thai</option>
-          <option value ="Vietnamese">Vietnamese</option>
+          <option class="cuisineOption" value="African">African</option>
+          <option class="cuisineOption" value="American">American</option>
+          <option class="cuisineOption" value="British">British</option>
+          <option class="cuisineOption" value="Cajun">Cajun</option>
+          <option class="cuisineOption" value="Caribbean">Caribbean</option>
+          <option class="cuisineOption" value="Chinese">Chinese</option>
+          <option class="cuisineOption" value="Eastern European">Eastern European</option>
+          <option class="cuisineOption" value="French">French</option>
+          <option class="cuisineOption" value="German">German</option>
+          <option class="cuisineOption" value="Greek">Greek</option>
+          <option class="cuisineOption" value="Indian">Indian</option>
+          <option class="cuisineOption" value="Irish">Irish</option>
+          <option class="cuisineOption" value="Italian">Italian</option>
+          <option class="cuisineOption" value="Japanese">Japanese</option>
+          <option class="cuisineOption" value="Jewish">Jewish</option>
+          <option class="cuisineOption" value="Korean">Korean</option>
+          <option class="cuisineOption" value="Latin American">Latin American</option>
+          <option class="cuisineOption" value="Mediterranean">Mediterranean</option>
+          <option class="cuisineOption" value="Mexican">Mexican</option>
+          <option class="cuisineOption" value="Middle Eastern">Middle Eastern</option>
+          <option class="cuisineOption" value="Nordic">Nordic</option>
+          <option class="cuisineOption" value="Southern">Southern</option>
+          <option class="cuisineOption" value="Spanish">Spanish</option>
+          <option class="cuisineOption" value="Thai">Thai</option>
+          <option class="cuisineOption" value="Vietnamese">Vietnamese</option>
         </select>
-        <input class="button is-rounded m-2" type="submit">
-    </form>
+        <input class="button is-rounded m-2" type="submit" />
+      </form>
 
-    
-    <button class="button is-rounded m-2">Randomize</button>
-  </main>
-<script src="./assets/script.js"></script>
-</body>
+      <button class="button is-rounded m-2">Randomize</button>
+    </main>
+    <script src="./assets/script.js"></script>
+  </body>
 </html>
