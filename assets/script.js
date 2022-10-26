@@ -1,27 +1,20 @@
-// make variables for the API search results we want and parse them into an array
-// ?q=dogs&format=
-const drinkList = [];
-const drinkId = "";
+// These variables grab the form element from the HTML
+var genreChoiceEl = document.getElementById('moviegenres');
 
-var genreChoice = document.getElementById('#genres');
+var drinkChoiceEl = document.getElementById('drinks');
 
-//var drinkChoice = document.getElementById('alcoholic-beverages');
+var cuisineChoiceEl = document.getElementById('cuisines');
 
-//var drinkChoice = document.querySelectorAll('#alcoholic-beverages')
+var choicesEl = document.getElementById('choices');
 
-//var drinkValue = drinkChoice.value
-var cuisineChoice = document.getElementById('#cuisines');
-
-// look up ingredients by name
-// Search by ing link: www.thecocktaildb.com/api/json/v1/1/filter.php?i=
-// get drinkID
-// Drink ID link: www.thecocktaildb.com/api/json/v1/1/lookup.php?i=
-// look up cocktails by drinkID (#####)
-// append instructions into HTML (e.g. instructions/image/measurements)
-var drinkChoice = document.getElementById("drinkChoice");
-
-var selectedDrink = drinkChoice.options[drinkChoice.selectedIndex].text;
+// This function below console logs the user's dropdown choices.
+choicesEl.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log(genreChoiceEl.value);
+    console.log(drinkChoiceEl.value);
+    console.log(cuisineChoiceEl.value);
+});
 
 
-console.log(drinkChoice);
-console.log(drinkValue);
+
+
