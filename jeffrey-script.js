@@ -43,7 +43,7 @@ console.log("randomDrink ~>", randomDrink);
 
 for (let i = 0; i < drinkOptions.length; i++) {
     console.log("drinkOptions ~>", [i], drinkOptions[i].innerText);
-    // console.log(drinkOptions.length);
+    // console.log(drink-options.length);
       }
 
 var cuisineOptions = document.querySelectorAll("option.cuisineOption");
