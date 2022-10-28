@@ -92,5 +92,5 @@ randomButton.addEventListener('click', function (event) {
     window.localStorage.setItem('Random Movie Genre', randomGenre)
 })
 
-const drinkUrl = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
-const drinkRecipeUrl = 'http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
+const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
+const drinkRecipeUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
