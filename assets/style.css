@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .container-two {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .image {
+    display: flex;
+    height: 30vh;
+  }
