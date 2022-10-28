@@ -8,6 +8,14 @@ var cuisineChoiceEl = document.getElementById('cuisines');
 
 var choicesEl = document.getElementById('choices');
 
+var drinkData;
+
+var randomDrinkOption;
+
+var randomDrinkId;
+
+var randomDrinkRecipe;
+
 // This function below console logs the user's dropdown choices.
 
 choicesEl.addEventListener("submit", function (event) {
@@ -15,12 +23,37 @@ choicesEl.addEventListener("submit", function (event) {
     console.log(genreChoiceEl.value);
     console.log(drinkChoiceEl.value);
     console.log(cuisineChoiceEl.value);
-//Below window commands set the user choices to local storage.
+    //Below window commands set the user choices to local storage.
     window.localStorage.setItem('User Genre', genreChoiceEl.value)
     window.localStorage.setItem('User Drink', drinkChoiceEl.value)
-    window.localStorage.setItem('User Cuisine',cuisineChoiceEl.value)
+    window.localStorage.setItem('User Cuisine', cuisineChoiceEl.value)
+    
+    fetch(drinkUrl + drinkChoiceEl.value)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        drinkData = data;
+        console.log(drinkData)
+        randomDrinkOption = data.drinks[Math.floor(Math.random() * data.drinks.length)]
+        randomDrinkId = randomDrinkOption.idDrink;
+        fetch(drinkRecipeUrl + randomDrinkId)
+            .then(function (drinkDetails) {
+                console.log(drinkDetails);
+                return drinkDetails.json()
+            })
+            .then(function (drinkDetailsData) {
+                randomDrinkRecipe = drinkDetailsData;
+                
+                console.log(drinkDetailsData);
+            })
+        console.log(randomDrinkOption);
+        console.log(randomDrinkId);
+        return data
+    })
 });
 
+console.log(randomDrinkRecipe);
 // Below variable attaches HTML randomize button to js variable.
 
 var randomButton = document.getElementById('randomize-button')
@@ -53,8 +86,11 @@ randomButton.addEventListener('click', function (event) {
     console.log(randomCuisine);
 
     for (let i = 0; i < cuisineOptions.length; i++) { }
-//Below window commands set selected random values to local storage
+    //Below window commands set selected random values to local storage
     window.localStorage.setItem('Random Cuisine', randomCuisine)
     window.localStorage.setItem('Random Drink', randomDrink)
     window.localStorage.setItem('Random Movie Genre', randomGenre)
 })
+
+const drinkUrl = 'http://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
+const drinkRecipeUrl = 'http://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
