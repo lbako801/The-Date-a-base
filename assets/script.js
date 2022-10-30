@@ -152,6 +152,9 @@ choicesEl.addEventListener("submit", function (event) {
             console.log(randomMovieDesc);
             randomMoviePoster = "https://image.tmdb.org/t/p/original//" + randomMovieOption.poster_path;
             console.log(randomMoviePoster);
+            document.getElementById('movie-pic').src = randomMoviePoster
+            document.getElementById('movie-title').textContent = randomMovieTitle
+            document.getElementById('movie-desc').textContent = randomMovieDesc
         })
        
 });
