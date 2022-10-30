@@ -6,6 +6,7 @@ const drinkRecipeUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i
 const mealUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?a='
 
 const mealRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
+  
 
 var genreChoiceEl = document.getElementById('genre-list');
 
@@ -22,6 +23,11 @@ var randomDrinkOption;
 var randomDrinkId;
 
 var randomDrinkRecipe;
+
+var randomDrinkName;
+
+var randomDrinkInst;
+
 // Cuisine variables
 var cuisineData;
 
@@ -33,16 +39,36 @@ var randomCuisineId
 
 var randomCuisineRecipe
 
+//Movie variables
+var randomMoviePage;
+
+var randomMovieOption;
+
+var randomMovieTitle
+
+var randomMovieDesc;
+
+var randomMoviePoster;
+
 // This function below console logs the user's dropdown choices.
 
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    function randomIntFromInterval(min, max) { 
+        return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+      
+    const randomMoviePage = randomIntFromInterval(1, 50);
+    console.log(randomMoviePage);
+
     //Below window commands set the user choices to local storage.
     window.localStorage.setItem('User Genre', genreChoiceEl.value)
     window.localStorage.setItem('User Drink', drinkChoiceEl.value)
     window.localStorage.setItem('User Cuisine', cuisineChoiceEl.value)
     
     //Below fetch commands request data arrays from cocktail API.
+    
     fetch(drinkUrl + drinkChoiceEl.value)
     .then(function (response) {
         return response.json()
@@ -59,13 +85,23 @@ choicesEl.addEventListener("submit", function (event) {
             })
             .then(function (drinkDetailsData) {
                 randomDrinkRecipe = drinkDetailsData;
-
+                randomDrinkName = drinkDetailsData.drinks[0].strDrink;
+                randomDrinkInst = drinkDetailsData.drinks[0].strInstructions;
+                randomDrinkPic = drinkDetailsData.drinks[0].strDrinkThumb;
+                document.getElementById('drink-pic').src = randomDrinkPic;
+                console.log(randomDrinkName);
                 console.log(drinkDetailsData);
+                document.getElementById('drink-name').textContent = randomDrinkName;
+                document.getElementById('drink-inst').textContent = randomDrinkInst;
             })
+            
         console.log(randomDrinkOption);
         console.log(randomDrinkId);
         return data
+        
     })
+
+    //Below fetch commands request data arrays from meal API.
 
     fetch(mealUrl + cuisineChoiceEl.value)
     .then(function (response) {
@@ -83,17 +119,42 @@ choicesEl.addEventListener("submit", function (event) {
             })
             .then(function (cuisineDetailsData) {
                 randomCuisineRecipe = cuisineDetailsData;
-
+                randomCuisineName = randomCuisineRecipe.meals[0].strMeal;
+                randomCuisineInst = randomCuisineRecipe.meals[0].strInstructions;
+                randomCuisinePic = randomCuisineRecipe.meals[0].strMealThumb;
+                document.getElementById('cuisine-pic').src = randomCuisinePic
+                document.getElementById('cuisine-name').textContent = randomCuisineName;
+                document.getElementById('cuisine-inst').textContent = randomCuisineInst;
+                
                 console.log(cuisineDetailsData);
             })
+        
         console.log(randomCuisineOption);
         console.log(randomCuisineId);
         return data
+    })
+    
+    const movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=a8164da2d4dbbd6d30b05bf46b5d46b2&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=" + randomMoviePage + "&with_genres=" + genreChoiceEl.value;
+
+    console.log(movieUrl);
+
+    fetch(movieUrl)
+        .then(function (response) {
+            return response.json();
         })
-
+        .then(function (data) {
+            movieData = data;
+            randomMovieOption = data.results[Math.floor(Math.random() * data.results.length)]
+            console.log(randomMovieOption);
+            randomMovieTitle = randomMovieOption.original_title;
+            console.log(randomMovieTitle)
+            randomMovieDesc = randomMovieOption.overview;
+            console.log(randomMovieDesc);
+            randomMoviePoster = "https://image.tmdb.org/t/p/original//" + randomMovieOption.poster_path;
+            console.log(randomMoviePoster);
+        })
+       
 });
-
-//console.log(randomDrinkRecipe);
 
 // Below variable attaches HTML randomize button to js variable.
 
