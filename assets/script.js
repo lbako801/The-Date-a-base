@@ -1,4 +1,11 @@
 // These variables grab the form element from the HTML
+const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
+
+const drinkRecipeUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
+
+const mealUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?a='
+
+const mealRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
 
 var genreChoiceEl = document.getElementById('genre-list');
 
@@ -7,19 +14,86 @@ var drinkChoiceEl = document.getElementById('drinks');
 var cuisineChoiceEl = document.getElementById('cuisines');
 
 var choicesEl = document.getElementById('choices');
+// Drink variables
+var drinkData;
+
+var randomDrinkOption;
+
+var randomDrinkId;
+
+var randomDrinkRecipe;
+// Cuisine variables
+var cuisineData;
+
+var randomCuisineOption
+
+var randomCuisineData
+
+var randomCuisineId
+
+var randomCuisineRecipe
 
 // This function below console logs the user's dropdown choices.
 
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(genreChoiceEl.value);
-    console.log(drinkChoiceEl.value);
-    console.log(cuisineChoiceEl.value);
-//Below window commands set the user choices to local storage.
+    //Below window commands set the user choices to local storage.
     window.localStorage.setItem('User Genre', genreChoiceEl.value)
     window.localStorage.setItem('User Drink', drinkChoiceEl.value)
-    window.localStorage.setItem('User Cuisine',cuisineChoiceEl.value)
+    window.localStorage.setItem('User Cuisine', cuisineChoiceEl.value)
+    
+    //Below fetch commands request data arrays from cocktail API.
+    fetch(drinkUrl + drinkChoiceEl.value)
+    .then(function (response) {
+        return response.json()
+    })
+    .then(function (data) {
+        drinkData = data;
+        console.log(drinkData)
+        randomDrinkOption = data.drinks[Math.floor(Math.random() * data.drinks.length)]
+        randomDrinkId = randomDrinkOption.idDrink;
+        fetch(drinkRecipeUrl + randomDrinkId)
+            .then(function (drinkDetails) {
+                console.log(drinkDetails);
+                return drinkDetails.json()
+            })
+            .then(function (drinkDetailsData) {
+                randomDrinkRecipe = drinkDetailsData;
+
+                console.log(drinkDetailsData);
+            })
+        console.log(randomDrinkOption);
+        console.log(randomDrinkId);
+        return data
+    })
+
+    fetch(mealUrl + cuisineChoiceEl.value)
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+        cuisineData = data;
+        console.log(cuisineData);
+        randomCuisineOption = data.meals[Math.floor(Math.random() * data.meals.length)]
+        randomCuisineId = randomCuisineOption.idMeal;
+        fetch(mealRecipeUrl + randomCuisineId)
+            .then(function (cuisineDetails) {
+                console.log(cuisineDetails);
+                return cuisineDetails.json()
+            })
+            .then(function (cuisineDetailsData) {
+                randomCuisineRecipe = cuisineDetailsData;
+
+                console.log(cuisineDetailsData);
+            })
+        console.log(randomCuisineOption);
+        console.log(randomCuisineId);
+        return data
+        })
+
 });
+
+//console.log(randomDrinkRecipe);
 
 // Below variable attaches HTML randomize button to js variable.
 
@@ -53,8 +127,10 @@ randomButton.addEventListener('click', function (event) {
     console.log(randomCuisine);
 
     for (let i = 0; i < cuisineOptions.length; i++) { }
-//Below window commands set selected random values to local storage
+    //Below window commands set selected random values to local storage
     window.localStorage.setItem('Random Cuisine', randomCuisine)
     window.localStorage.setItem('Random Drink', randomDrink)
     window.localStorage.setItem('Random Movie Genre', randomGenre)
 })
+
+
