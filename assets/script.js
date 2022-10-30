@@ -133,4 +133,3 @@ randomButton.addEventListener('click', function (event) {
     window.localStorage.setItem('Random Movie Genre', randomGenre)
 })
 
-
