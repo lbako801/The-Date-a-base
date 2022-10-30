@@ -33,24 +33,23 @@
         <div class="notification is-link">
         <label for="movie-genres">Choose A Genre:</label>
         <select id="genre-list" name="genres" class="dropdown-content">
-          <option class="genreOption" value="Animation">Animation</option>
-          <option class="genreOption" value="Action">Action</option>
-          <option class="genreOption" value="Adventure">Adventure</option>
-          <option class="genreOption" value="Biography">Biography</option>
-          <option class="genreOption" value="Comedy">Comedy</option>
-          <option class="genreOption" value="Crime">Crime</option>
-          <option class="genreOption" value="Drama">Drama</option>
-          <option class="genreOption" value="Documentary">Documentary</option>
-          <option class="genreOption" value="Fantasy">Fantasy</option>
-          <option class="genreOption" value="Historical">Historical</option>
-          <option class="genreOption" value="Horror">Horror</option>
-          <option class="genreOption" value="Musical">Musical</option>
-          <option class="genreOption" value="Mystery">Mystery</option>
-          <option class="genreOption" value="Romance">Romance</option>
-          <option class="genreOption" value="Sci-Fi">Sci-Fi</option>
-          <option class="genreOption" value="Thriller">Thriller</option>
-          <option class="genreOption" value="War">War</option>
-          <option class="genreOption" value="Western">Western</option>
+          <option class="genreOption" value="16">Animation</option>
+          <option class="genreOption" value="28">Action</option>
+          <option class="genreOption" value="12">Adventure</option>
+          <option class="genreOption" value="35">Comedy</option>
+          <option class="genreOption" value="80">Crime</option>
+          <option class="genreOption" value="18">Drama</option>
+          <option class="genreOption" value="99">Documentary</option>
+          <option class="genreOption" value="14">Fantasy</option>
+          <option class="genreOption" value="36">Historical</option>
+          <option class="genreOption" value="27">Horror</option>
+          <option class="genreOption" value="10402">Musical</option>
+          <option class="genreOption" value="9648">Mystery</option>
+          <option class="genreOption" value="10749">Romance</option>
+          <option class="genreOption" value="878">Sci-Fi</option>
+          <option class="genreOption" value="53">Thriller</option>
+          <option class="genreOption" value="10752">War</option>
+          <option class="genreOption" value="37">Western</option>
         </select>
 </div>
 <div class="notification is-warning">
@@ -63,10 +62,6 @@
           <option class="drinkOption" value="Cognac">Cognac</option>
           <option class="drinkOption" value="Everclear">Everclear</option>
           <option class="drinkOption" value="Gin">Gin</option>
-          <option class="drinkOption" value="Hard Cider">Hard Cider</option>
-          <option class="drinkOption" value="Liquor">Liquor</option>
-          <option class="drinkOption" value="Martini">Martini</option>
-          <option class="drinkOption" value="Mead">Mead</option>
           <option class="drinkOption" value="Rum">Rum</option>
           <option class="drinkOption" value="Scotch">Scotch</option>
           <option class="drinkOption" value="Spiced Rum">Spiced Rum</option>
@@ -112,22 +107,23 @@
       
       <button class="button is-rounded m-2" id="randomize-button">Randomize</button>
     </main>
-    <section class="section column-lg container-two">
+    <section class="section">
       <div class="notification is-link">
           <div class="title container" id ="movie-title"></div>
             <div class="image"><img src="./assets/images/movie.jpg"/></div>
             <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id vel nesciunt numquam culpa, dolores ex magni est placeat totam reiciendis obcaecati repudiandae ducimus blanditiis autem dolor quibusdam ea similique eos!</div>
-
       </div>
+
       <div class="notification is-warning">
           <div class="title container" id="drink-name"></div>
-          <div class="image"><img src="./assets/images/drink.jpg"/></div>
-          <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo repellendus iure nesciunt aliquid officiis, corporis, error cumque accusamus ipsam cupiditate accusantium? Doloremque maiores amet dolore distinctio modi beatae officiis illo.</div>
+          <div class="image"><img id="drink-pic" src=""/></div>
+          <div id="drink-inst"></div>
         </div>
+
       <div class="notification is-success">
-          <div class="title container" id="recipe-name"></div>
-            <div class="image"><img src="./assets/images/food.jpg"></div>
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat unde vero quia perspiciatis asperiores harum iusto deleniti at illum? Laborum fuga cupiditate molestiae at molestias magnam amet fugiat? Laborum, enim.</div>
+          <div class="title container" id="cuisine-name"></div>
+            <div class="image"><img id='cuisine-pic' src=""/></div>
+            <div id="cuisine-inst"></div>
       </div>
   </section>
     <script src="./assets/script.js"></script>
