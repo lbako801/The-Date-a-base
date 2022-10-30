@@ -30,7 +30,7 @@
     </div>
     <main>
       <form id="choices" class="column-md container">
-        <div class="notification is-link">
+        <div class="notification color-one">
         <label for="movie-genres">Choose A Genre:</label>
         <select id="genre-list" name="genres" class="dropdown-content">
           <option class="genreOption" value="16">Animation</option>
@@ -52,7 +52,7 @@
           <option class="genreOption" value="37">Western</option>
         </select>
 </div>
-<div class="notification is-warning">
+<div class="notification color-two">
         <label for="alcoholic-beverages">Choose A Drink:</label>
         <select id="drinks" name="drinks" class="dropdown-content">
           <option class="drinkOption" value="Amaretto">Amaretto</option>
@@ -70,7 +70,7 @@
           <option class="drinkOption" value="Whiskey">Whiskey</option>
         </select>
 </div>
-<div class="notification is-success">
+<div class="notification color-three">
         <label for="cuisines">Choose A Cuisine:</label>
         <select id="cuisines" name="cuisines" class="dropdown-content">
           <option class="cuisineOption" value="American">American</option>
@@ -108,19 +108,18 @@
       <button class="button is-rounded m-2" id="randomize-button">Randomize</button>
     </main>
     <section class="section">
-      <div class="notification is-link">
+      <div class="notification color-one">
           <div class="title container" id ="movie-title"></div>
-            <div class="image"><img src="./assets/images/movie.jpg"/></div>
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id vel nesciunt numquam culpa, dolores ex magni est placeat totam reiciendis obcaecati repudiandae ducimus blanditiis autem dolor quibusdam ea similique eos!</div>
-      </div>
-
-      <div class="notification is-warning">
+            <div class="image"><img id="movie-pic" src=""/></div>
+            <div id="movie-desc"></div>
+        </div>
+      <div class="notification color-two">
           <div class="title container" id="drink-name"></div>
           <div class="image"><img id="drink-pic" src=""/></div>
           <div id="drink-inst"></div>
         </div>
 
-      <div class="notification is-success">
+      <div class="notification color-three">
           <div class="title container" id="cuisine-name"></div>
             <div class="image"><img id='cuisine-pic' src=""/></div>
             <div id="cuisine-inst"></div>
