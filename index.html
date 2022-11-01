@@ -13,15 +13,14 @@
 
     <title>Date-A-Base 💝</title>
     <style>
-
     </style>
   </head>
 
   <body class="section has-background-dark">
-    <div class="container">
+    <div class="container-zero">
       <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
     </div>
-    <div class="container">
+    <div class="container-zero">
       <p class="sub-title is-size-4 has-text-white">
         Time to
         <span class="has-text-weight-bold has-text-danger-dark">SPICE</span> up
@@ -29,7 +28,7 @@
       </p>
     </div>
     <main>
-      <form id="choices" class="column-md container">
+      <form id="choices" class="container">
         <div class="notification color-one">
         <label for="movie-genres">Choose A Genre:</label>
         <select id="genre-list" name="genres" class="dropdown-content">
@@ -102,26 +101,28 @@
           <option class="cuisineOption" value="Vietnamese">Vietnamese</option>
         </select>
       </div>
-        <input class="button is-rounded m-2" type="submit" />
-      </form>
+      <div class="submit-button">
+        <input class=" button is-rounded m-2 color-two" type="submit" />
+      </div>
+    </form>
       
       <!-- <button class="button is-rounded m-2" id="randomize-button">Randomize</button>
     </main> -->
     <section class="section">
-      <div class="notification color-one">
-          <div class="title container" id ="movie-title"></div>
-            <div class="image"><img id="movie-pic" src=""/></div>
+      <div class="notification container-two color-one">
+          <div class="title" id ="movie-title"></div>
+            <div class="images"><img id="movie-pic" src=""/></div>
             <div id="movie-desc"></div>
         </div>
-      <div class="notification color-two">
-          <div class="title container" id="drink-name"></div>
-          <div class="image"><img id="drink-pic" src=""/></div>
+      <div class="notification container-two color-two">
+          <div class="title" id="drink-name"></div>
+          <div class="images"><img id="drink-pic" src=""/></div>
           <div id="drink-inst"></div>
         </div>
 
-      <div class="notification color-three">
-          <div class="title container" id="cuisine-name"></div>
-            <div class="image"><img id='cuisine-pic' src=""/></div>
+      <div class="notification container-two color-three">
+          <div class="title" id="cuisine-name"></div>
+            <div class="images"><img id='cuisine-pic' src=""/></div>
             <div id="cuisine-inst"></div>
       </div>
   </section>

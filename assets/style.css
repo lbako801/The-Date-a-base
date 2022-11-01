@@ -1,17 +1,26 @@
+.container-zero {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
 .container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+}
+.images {
+    width: 40vw;
+    height: auto;
+}
   .container-two {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .image {
-    display: flex;
-    height: 30vh;
-  }
+
 
   .color-one {
     background-color: #CE0F35;
@@ -28,4 +37,13 @@
     color: #272932;
   }
 
+  .submit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 
+@media all and (max-width: 768px) {
+  .container {display: flex; flex-direction: column; justify-content: center; align-content: center; text-align: center;}
+}

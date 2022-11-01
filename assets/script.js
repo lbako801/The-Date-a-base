@@ -145,7 +145,7 @@ choicesEl.addEventListener("submit", function (event) {
 
 // Below variable attaches HTML randomize button to js variable.
 
-var randomButton = document.getElementById('randomize-button')
+// var randomButton = document.getElementById('randomize-button')
 
 //Below function makes the randomize button initiate randomization of values in dropdown lists.
 
