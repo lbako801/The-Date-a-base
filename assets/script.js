@@ -70,6 +70,8 @@ hide.style.display = "none"
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
     
+    document.getElementById('drink-ing').innerHTML = "";
+    document.getElementById('cuisine-ing').innerHTML = "";
     hide.style.display="block"
 
 // Below function randomizes the page number in the movie API parameters.
