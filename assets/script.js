@@ -130,12 +130,12 @@ choicesEl.addEventListener("submit", function (event) {
     })
     .then(function (data) {
         cuisineData = data;
-       
+
         randomCuisineOption = data.meals[Math.floor(Math.random() * data.meals.length)]
         randomCuisineId = randomCuisineOption.idMeal;
         fetch(mealRecipeUrl + randomCuisineId)
             .then(function (cuisineDetails) {
-              
+
                 return cuisineDetails.json()
             })
             .then(function (cuisineDetailsData) {
@@ -148,7 +148,7 @@ choicesEl.addEventListener("submit", function (event) {
                 document.getElementById('cuisine-inst').textContent = randomCuisineInst;
                 
             })
-        
+
         return data
     })
     
@@ -161,6 +161,7 @@ choicesEl.addEventListener("submit", function (event) {
         .then(function (data) {
             movieData = data;
             randomMovieOption = data.results[Math.floor(Math.random() * data.results.length)]
+
          
             randomMovieTitle = randomMovieOption.original_title;
             
@@ -168,6 +169,7 @@ choicesEl.addEventListener("submit", function (event) {
             
             randomMoviePoster = "https://image.tmdb.org/t/p/original//" + randomMovieOption.poster_path;
         
+
             document.getElementById('movie-pic').src = randomMoviePoster
             document.getElementById('movie-title').textContent = randomMovieTitle
             document.getElementById('movie-desc').textContent = randomMovieDesc
@@ -176,6 +178,7 @@ choicesEl.addEventListener("submit", function (event) {
 });
 
 //Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition.
+
 
 // Below variable attaches HTML randomize button to js variable.
 //var randomButton = document.getElementById('randomize-button')
@@ -204,6 +207,41 @@ choicesEl.addEventListener("submit", function (event) {
 //     var randomCuisineNumber = Math.floor(Math.random() * cuisineOptions.length);
 //     var randomCuisine = cuisineOptions[randomCuisineNumber].innerText;
 //     console.log(randomCuisine);
+=======
+//Below function makes the randomize button initiate randomization of values in dropdown lists.
+
+// randomButton.addEventListener('click', function (event) {
+
+//     var genreOptions = document.querySelectorAll("option.genreOption");
+
+//     var randomGenreNumber = Math.floor(Math.random() * genreOptions.length);
+
+//     var randomGenre = genreOptions[randomGenreNumber].innerText;
+//     console.log(randomGenre);
+
+//     for (let i = 0; i < genreOptions.length; i++) { }
+
+//     var drinkOptions = document.querySelectorAll("option.drinkOption");
+
+//     var randomDrinkNumber = Math.floor(Math.random() * drinkOptions.length);
+//     var randomDrink = drinkOptions[randomDrinkNumber].innerText;
+//     console.log(randomDrink);
+
+//     for (let i = 0; i < drinkOptions.length; i++) { }
+
+//     var cuisineOptions = document.querySelectorAll("option.cuisineOption");
+
+//     var randomCuisineNumber = Math.floor(Math.random() * cuisineOptions.length);
+//     var randomCuisine = cuisineOptions[randomCuisineNumber].innerText;
+//     console.log(randomCuisine);
+
+//     for (let i = 0; i < cuisineOptions.length; i++) { }
+//     //Below window commands set selected random values to local storage
+//     window.localStorage.setItem('Random Cuisine', randomCuisine)
+//     window.localStorage.setItem('Random Drink', randomDrink)
+//     window.localStorage.setItem('Random Movie Genre', randomGenre)
+// })
+
 
 //     for (let i = 0; i < cuisineOptions.length; i++) { }
 //     //Below window commands set selected random values to local storage
