@@ -46,6 +46,10 @@ var randomCuisineId
 
 var randomCuisineRecipe
 
+var randomCuisineIng;
+
+var randomCuisineMeasure;
+
 //Movie variables
 var randomMoviePage;
 
@@ -146,6 +150,27 @@ choicesEl.addEventListener("submit", function (event) {
                 document.getElementById('cuisine-pic').src = randomCuisinePic
                 document.getElementById('cuisine-name').textContent = randomCuisineName;
                 document.getElementById('cuisine-inst').textContent = randomCuisineInst;
+                
+                for (let i = 1; i < 16; i++){
+                    console.log(i);
+                    randomCuisineIng = cuisineDetailsData.meals[0][`strIngredient`+ i];
+                    console.log(randomCuisineIng);
+                    randomCuisineMeasure = cuisineDetailsData.meals[0][`strMeasure` + i];
+                    console.log(randomCuisineMeasure);
+                    if (cuisineDetailsData.meals[0]
+                    [`strIngredient` + i] === null){
+                        break;
+                    } 
+                    if (cuisineDetailsData.meals[0]
+                        [`strMeasure` + i] === null){
+                        break;
+                    } 
+
+                    let cuisineIng = document.createElement('li');
+                    cuisineIng.innerHTML = cuisineDetailsData.meals[0][`strIngredient` + i] + " - " + cuisineDetailsData.meals[0][`strMeasure` + i];
+                    
+                    console.log(cuisineIng);
+                }
                 
             })
         
