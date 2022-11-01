@@ -205,7 +205,9 @@ choicesEl.addEventListener("submit", function (event) {
     document.getElementById('cuisine-directions').textContent= "Directions - "
 });
 
+
 //Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition.
+
 
 // Below variable attaches HTML randomize button to js variable.
 //var randomButton = document.getElementById('randomize-button')
