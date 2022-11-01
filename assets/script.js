@@ -61,10 +61,17 @@ var randomMovieDesc;
 
 var randomMoviePoster;
 
+var hide = document.getElementById('result-boxes')
+
+hide.style.display = "none"
+
 // This function below console logs the user's dropdown choices.
 
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
+    
+    hide.style.display="block"
+
 // Below function randomizes the page number in the movie API parameters.
     function randomIntFromInterval(min, max) { 
         return Math.floor(Math.random() * (max - min + 1) + min)
