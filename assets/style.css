@@ -12,3 +12,20 @@
     display: flex;
     height: 30vh;
   }
+
+  .color-one {
+    background-color: #CE0F35;
+    color: #ffffff;
+
+  }
+  .color-two {
+    background-color: #E5F4E3;
+    color: #272932;
+  }
+
+  .color-three {
+    background-color: #5da9e9;
+    color: #272932;
+  }
+
+
