@@ -1,4 +1,5 @@
-// These variables grab the form element from the HTML
+// Below constants are the API URLs
+
 const drinkUrl = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i='
 
 const drinkRecipeUrl = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
@@ -7,6 +8,7 @@ const mealUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?a='
 
 const mealRecipeUrl = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='
   
+// These variables grab the form element from the HTML
 
 var genreChoiceEl = document.getElementById('genre-list');
 
@@ -15,6 +17,7 @@ var drinkChoiceEl = document.getElementById('drinks');
 var cuisineChoiceEl = document.getElementById('cuisines');
 
 var choicesEl = document.getElementById('choices');
+
 // Drink variables
 var drinkData;
 
@@ -27,6 +30,10 @@ var randomDrinkRecipe;
 var randomDrinkName;
 
 var randomDrinkInst;
+
+var randomDrinkIng;
+
+var randomDrinkMeasure;
 
 // Cuisine variables
 var cuisineData;
@@ -54,13 +61,12 @@ var randomMoviePoster;
 
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
-
+// Below function randomizes the page number in the movie API parameters.
     function randomIntFromInterval(min, max) { 
         return Math.floor(Math.random() * (max - min + 1) + min)
       }
       
     const randomMoviePage = randomIntFromInterval(1, 50);
-
 
     //Below window commands set the user choices to local storage.
     window.localStorage.setItem('User Genre', genreChoiceEl.value)
@@ -89,6 +95,27 @@ choicesEl.addEventListener("submit", function (event) {
                 document.getElementById('drink-pic').src = randomDrinkPic;
                 document.getElementById('drink-name').textContent = randomDrinkName;
                 document.getElementById('drink-inst').textContent = randomDrinkInst;
+                
+                for (let i = 1; i < 16; i++){
+                    console.log(i);
+                    randomDrinkIng = drinkDetailsData.drinks[0][`strIngredient`+ i];
+                    console.log(randomDrinkIng);
+                    randomDrinkMeasure = drinkDetailsData.drinks[0][`strMeasure` + i];
+                    console.log(randomDrinkMeasure);
+                    if (drinkDetailsData.drinks[0]
+                    [`strIngredient` + i] === null){
+                        break;
+                    } 
+                    if (drinkDetailsData.drinks[0]
+                        [`strMeasure` + i] === null){
+                        break;
+                    } 
+
+                    let drinkIng = document.createElement('li');
+                    drinkIng.innerHTML = drinkDetailsData.drinks[0][`strIngredient` + i] + " - " + drinkDetailsData.drinks[0][`strMeasure` + i];
+                    
+                    console.log(drinkIng);
+                }
             })
             
         return data
@@ -103,10 +130,12 @@ choicesEl.addEventListener("submit", function (event) {
     })
     .then(function (data) {
         cuisineData = data;
+
         randomCuisineOption = data.meals[Math.floor(Math.random() * data.meals.length)]
         randomCuisineId = randomCuisineOption.idMeal;
         fetch(mealRecipeUrl + randomCuisineId)
             .then(function (cuisineDetails) {
+
                 return cuisineDetails.json()
             })
             .then(function (cuisineDetailsData) {
@@ -125,7 +154,6 @@ choicesEl.addEventListener("submit", function (event) {
     
     const movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=a8164da2d4dbbd6d30b05bf46b5d46b2&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=" + randomMoviePage + "&with_genres=" + genreChoiceEl.value;
 
-
     fetch(movieUrl)
         .then(function (response) {
             return response.json();
@@ -133,9 +161,15 @@ choicesEl.addEventListener("submit", function (event) {
         .then(function (data) {
             movieData = data;
             randomMovieOption = data.results[Math.floor(Math.random() * data.results.length)]
+
+         
             randomMovieTitle = randomMovieOption.original_title;
+            
             randomMovieDesc = randomMovieOption.overview;
+            
             randomMoviePoster = "https://image.tmdb.org/t/p/original//" + randomMovieOption.poster_path;
+        
+
             document.getElementById('movie-pic').src = randomMoviePoster
             document.getElementById('movie-title').textContent = randomMovieTitle
             document.getElementById('movie-desc').textContent = randomMovieDesc
@@ -143,10 +177,37 @@ choicesEl.addEventListener("submit", function (event) {
        
 });
 
+//Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition.
+
+
 // Below variable attaches HTML randomize button to js variable.
+//var randomButton = document.getElementById('randomize-button')
 
-var randomButton = document.getElementById('randomize-button')
+// randomButton.addEventListener('click', function (event) {
 
+//     var genreOptions = document.querySelectorAll("option.genreOption");
+
+//     var randomGenreNumber = Math.floor(Math.random() * genreOptions.length);
+
+//     var randomGenre = genreOptions[randomGenreNumber].innerText;
+//     console.log(randomGenre);
+
+//     for (let i = 0; i < genreOptions.length; i++) { }
+
+//     var drinkOptions = document.querySelectorAll("option.drinkOption");
+
+//     var randomDrinkNumber = Math.floor(Math.random() * drinkOptions.length);
+//     var randomDrink = drinkOptions[randomDrinkNumber].innerText;
+//     console.log(randomDrink);
+
+//     for (let i = 0; i < drinkOptions.length; i++) { }
+
+//     var cuisineOptions = document.querySelectorAll("option.cuisineOption");
+
+//     var randomCuisineNumber = Math.floor(Math.random() * cuisineOptions.length);
+//     var randomCuisine = cuisineOptions[randomCuisineNumber].innerText;
+//     console.log(randomCuisine);
+=======
 //Below function makes the randomize button initiate randomization of values in dropdown lists.
 
 // randomButton.addEventListener('click', function (event) {
@@ -181,3 +242,10 @@ var randomButton = document.getElementById('randomize-button')
 //     window.localStorage.setItem('Random Movie Genre', randomGenre)
 // })
 
+
+//     for (let i = 0; i < cuisineOptions.length; i++) { }
+//     //Below window commands set selected random values to local storage
+//     window.localStorage.setItem('Random Cuisine', randomCuisine)
+//     window.localStorage.setItem('Random Drink', randomDrink)
+//     window.localStorage.setItem('Random Movie Genre', randomGenre)
+// })
