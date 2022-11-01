@@ -101,24 +101,25 @@ choicesEl.addEventListener("submit", function (event) {
                 document.getElementById('drink-inst').textContent = randomDrinkInst;
                 
                 for (let i = 1; i < 16; i++){
-                    console.log(i);
+                    
                     randomDrinkIng = drinkDetailsData.drinks[0][`strIngredient`+ i];
-                    console.log(randomDrinkIng);
+                    
                     randomDrinkMeasure = drinkDetailsData.drinks[0][`strMeasure` + i];
-                    console.log(randomDrinkMeasure);
-                    if (drinkDetailsData.drinks[0]
-                    [`strIngredient` + i] === null){
+                   
+                    if (!drinkDetailsData.drinks[0]
+                    [`strIngredient` + i]){
                         break;
                     } 
-                    if (drinkDetailsData.drinks[0]
-                        [`strMeasure` + i] === null){
+                    if (!drinkDetailsData.drinks[0]
+                        [`strMeasure` + i]){
                         break;
                     } 
 
                     let drinkIng = document.createElement('li');
+
                     drinkIng.innerHTML = drinkDetailsData.drinks[0][`strIngredient` + i] + " - " + drinkDetailsData.drinks[0][`strMeasure` + i];
                     
-                    console.log(drinkIng);
+                    document.getElementById('drink-ing').append(drinkIng)
                 }
             })
             
@@ -151,25 +152,22 @@ choicesEl.addEventListener("submit", function (event) {
                 document.getElementById('cuisine-name').textContent = randomCuisineName;
                 document.getElementById('cuisine-inst').textContent = randomCuisineInst;
                 
-                for (let i = 1; i < 16; i++){
-                    console.log(i);
+                for (let i = 1; i < 21; i++){
+                 
                     randomCuisineIng = cuisineDetailsData.meals[0][`strIngredient`+ i];
-                    console.log(randomCuisineIng);
+                    
                     randomCuisineMeasure = cuisineDetailsData.meals[0][`strMeasure` + i];
-                    console.log(randomCuisineMeasure);
-                    if (cuisineDetailsData.meals[0]
-                    [`strIngredient` + i] === null){
+                    
+                    if (!cuisineDetailsData.meals[0][`strIngredient` + i]){
                         break;
                     } 
-                    if (cuisineDetailsData.meals[0]
-                        [`strMeasure` + i] === null){
+                    if (!cuisineDetailsData.meals[0][`strMeasure` + i]){
                         break;
                     } 
-
                     let cuisineIng = document.createElement('li');
                     cuisineIng.innerHTML = cuisineDetailsData.meals[0][`strIngredient` + i] + " - " + cuisineDetailsData.meals[0][`strMeasure` + i];
-                    
-                    console.log(cuisineIng);
+
+                    document.getElementById('cuisine-ing').append(cuisineIng);
                 }
                 
             })
@@ -198,6 +196,13 @@ choicesEl.addEventListener("submit", function (event) {
             document.getElementById('movie-desc').textContent = randomMovieDesc
         })
        
+    document.getElementById('cuisine-ing-header').textContent = "Ingredients -";
+
+    document.getElementById('drink-ing-header').textContent = "Ingredients -"
+
+    document.getElementById('drink-directions').textContent = "Directions -"
+
+    document.getElementById('cuisine-directions').textContent= "Directions - "
 });
 
 //Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition.
