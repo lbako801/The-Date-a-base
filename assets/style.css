@@ -51,3 +51,7 @@
 h3 {
   font-weight: bolder;
 }
+
+.enable-line-break {
+  white-space: pre-wrap;
+}

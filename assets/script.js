@@ -70,6 +70,8 @@ hide.style.display = "none"
 choicesEl.addEventListener("submit", function (event) {
     event.preventDefault();
     
+    document.getElementById('drink-ing').innerHTML = "";
+    document.getElementById('cuisine-ing').innerHTML = "";
     hide.style.display="block"
 
 // Below function randomizes the page number in the movie API parameters.
@@ -100,9 +102,10 @@ choicesEl.addEventListener("submit", function (event) {
             })
             .then(function (drinkDetailsData) {
                 randomDrinkRecipe = drinkDetailsData;
-                randomDrinkName = drinkDetailsData.drinks[0].strDrink;
-                randomDrinkInst = drinkDetailsData.drinks[0].strInstructions;
-                randomDrinkPic = drinkDetailsData.drinks[0].strDrinkThumb;
+                randomDrinkName = drinkDetailsData.drinks[0].strDrink; // <----- DRINK NAME 
+                randomDrinkInst = drinkDetailsData.drinks[0].strInstructions; // <----- DRINK INSTRUCTIONS
+                randomDrinkPic = drinkDetailsData.drinks[0].strDrinkThumb; // <----- DRINK THUMBNAIL
+
                 document.getElementById('drink-pic').src = randomDrinkPic;
                 document.getElementById('drink-name').textContent = randomDrinkName;
                 document.getElementById('drink-inst').textContent = randomDrinkInst;
@@ -152,12 +155,15 @@ choicesEl.addEventListener("submit", function (event) {
             })
             .then(function (cuisineDetailsData) {
                 randomCuisineRecipe = cuisineDetailsData;
-                randomCuisineName = randomCuisineRecipe.meals[0].strMeal;
-                randomCuisineInst = randomCuisineRecipe.meals[0].strInstructions;
-                randomCuisinePic = randomCuisineRecipe.meals[0].strMealThumb;
+                randomCuisineName = randomCuisineRecipe.meals[0].strMeal; // <----- MEAL NAME 
+                randomCuisineInst = randomCuisineRecipe.meals[0].strInstructions; // <----- INSTRUCTIONS
+                randomCuisinePic = randomCuisineRecipe.meals[0].strMealThumb; // <----- THUMBNAIL
+
+                var randomCuisineInstFormatted = randomCuisineInst.replaceAll('.', '.\n'); 
+
                 document.getElementById('cuisine-pic').src = randomCuisinePic
                 document.getElementById('cuisine-name').textContent = randomCuisineName;
-                document.getElementById('cuisine-inst').textContent = randomCuisineInst;
+                document.getElementById('cuisine-inst').textContent = `${randomCuisineInstFormatted}`;
                 
                 for (let i = 1; i < 21; i++){
                  
@@ -203,13 +209,13 @@ choicesEl.addEventListener("submit", function (event) {
             document.getElementById('movie-desc').textContent = randomMovieDesc
         })
        
-    document.getElementById('cuisine-ing-header').textContent = "Ingredients -";
+    document.getElementById('cuisine-ing-header').textContent = "Ingredients:";
 
-    document.getElementById('drink-ing-header').textContent = "Ingredients -"
+    document.getElementById('drink-ing-header').textContent = "Ingredients:"
 
-    document.getElementById('drink-directions').textContent = "Directions -"
+    document.getElementById('drink-directions').textContent = "Directions:"
 
-    document.getElementById('cuisine-directions').textContent= "Directions - "
+    document.getElementById('cuisine-directions').textContent= "Directions:"
 });
 
 
