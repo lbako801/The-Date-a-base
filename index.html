@@ -6,21 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/reset.css"/>
     <link rel="stylesheet" href="./assets/style.css"/>
-
-    <title>The Date-A-Base 💝</title>
+    <link rel="icon" href="./assets/images/PikPng.com_pixel-heart-png_1787846.png">
+    <title>Date-A-Base </title>
   </head>
 
   <body>
         <!-- Website Title Section -->
         <div class="main-title" >
-          <h1 class="title is-size-2 has-text-white">Date-A-Base</h1>
-          <p>Time to SPICE up your date nights!</p>
+          <h1 id="date-title">Date-A-Base</h1>
+          <p>Time to <span>SPICE</span> up your date nights!</p>
+          <p>>> Select options to start! <<</p>
         </div>
       <!-- Dropdown Selectors for Movie/Drink/Meal -->
       <form id="choices" class="container">
           <div class="choice-select">
-                  <label for="movie-genres">Choose A Genre:</label>
+                  <label for="movie-genres">GENRE:</label>
                   <select id="genre-list" name="genres" class="dropdown-content">
                       <option class="genreOption" value="16">Animation</option>
                       <option class="genreOption" value="28">Action</option>
@@ -41,8 +43,9 @@
                       <option class="genreOption" value="37">Western</option>
                   </select>
           </div>
+
         <div class="choice-select">
-              <label for="alcoholic-beverages">Choose A Drink:</label>
+              <label for="alcoholic-beverages">DRINK:</label>
                 <select id="drinks" name="drinks" class="dropdown-content">
                   <option class="drinkOption" value="Amaretto">Amaretto</option>
                   <option class="drinkOption" value="Bourbon">Bourbon</option>
@@ -61,7 +64,7 @@
         </div>
 
         <div class="choice-select">
-                <label for="cuisines">Choose A Cuisine:</label>
+                <label for="cuisines">CUISINE:</label>
                 <select id="cuisines" name="cuisines" class="dropdown-content">
                   <option class="cuisineOption" value="American">American</option>
                   <option class="cuisineOption" value="British">British</option>
