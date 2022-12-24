@@ -188,7 +188,7 @@ choicesEl.addEventListener("submit", function (event) {
         return data
     })
     
-    const movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=a8164da2d4dbbd6d30b05bf46b5d46b2&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=false&page=" + randomMoviePage + "&with_genres=" + genreChoiceEl.value;
+    const movieUrl = "https://api.themoviedb.org/3/discover/movie?api_key=a8164da2d4dbbd6d30b05bf46b5d46b2&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=" + randomMoviePage + "&with_genres=" + genreChoiceEl.value;
 
     fetch(movieUrl)
         .then(function (response) {
@@ -218,8 +218,7 @@ choicesEl.addEventListener("submit", function (event) {
     document.getElementById('cuisine-directions').textContent= "Directions:"
 });
 
-
-//Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition.
+//Below function makes the randomize button initiate randomization of values in dropdown lists. Commented out now for future feature addition. WIll be implemented later.
 
 
 // Below variable attaches HTML randomize button to js variable.
