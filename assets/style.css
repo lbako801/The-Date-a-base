@@ -29,6 +29,7 @@ background-color: #040404;
   font-family: 'Press Start 2P', cursive;
   line-height: 40px;
   width: 95vw;
+  text-shadow: 2px 3px 13px #53a330;
 }
 
 span {
@@ -47,10 +48,11 @@ to{
 
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   font-family: 'Press Start 2P', cursive;
   width: 95vw;
+  align-items: center;
   justify-content: space-around;
   padding-top: 30px;
 }
@@ -80,6 +82,7 @@ to{
 .submit-btn {
   align-items: center;
   justify-items: center;
+  padding: 20px;
 }
 
 .submit-btn>input{
@@ -89,11 +92,16 @@ to{
   font-size: 20px;
   flex-wrap: wrap;
   padding: 20px;
+  box-shadow: 2px 3px 13px #53a330;
+  border: #49fc03 solid;
+  box-sizing: border-box;
+  
 }
 
 .submit-btn>input:hover {
   cursor: pointer;
-  
+  font-size: 25px;
+  box-shadow: 1px 9px 23px #53a330;
 }
 
 .main-container {
