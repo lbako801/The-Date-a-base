@@ -22,7 +22,7 @@
       <!-- Dropdown Selectors for Movie/Drink/Meal -->
       <form id="choices" class="container">
           <div class="choice-select">
-                  <label for="movie-genres">GENRE:</label>
+                  <label for="movie-genres">-GENRE-</label>
                   <select id="genre-list" name="genres" class="dropdown-content">
                       <option class="genreOption" value="16">Animation</option>
                       <option class="genreOption" value="28">Action</option>
@@ -45,7 +45,7 @@
           </div>
 
         <div class="choice-select">
-              <label for="alcoholic-beverages">DRINK:</label>
+              <label for="alcoholic-beverages">-DRINK-</label>
                 <select id="drinks" name="drinks" class="dropdown-content">
                   <option class="drinkOption" value="Amaretto">Amaretto</option>
                   <option class="drinkOption" value="Bourbon">Bourbon</option>
@@ -64,7 +64,7 @@
         </div>
 
         <div class="choice-select">
-                <label for="cuisines">CUISINE:</label>
+                <label for="cuisines">-CUISINE-</label>
                 <select id="cuisines" name="cuisines" class="dropdown-content">
                   <option class="cuisineOption" value="American">American</option>
                   <option class="cuisineOption" value="British">British</option>
@@ -114,11 +114,12 @@
         <div class="result-container">
           <div class ="result-title" id="drink-name"></div>
           <img id="drink-pic" src=""/>
-            <h3 id="drink-ing-header"></h3>
-            <ul id="drink-ing"></ul>
+            <h3 class ="result-header" id="drink-ing-header"></h3>
+            <ul class="ing" id="drink-ing"></ul>
+            <hr>
           <div>
-            <h3 id ="drink-directions"></h3>
-            <div id="drink-inst"></div>
+            <h3 class = "result-header" id ="drink-directions"></h3>
+            <div class="ing" id="drink-inst"></div>
           </div>
         </div>
       <!-- HTML for Meal -->
@@ -126,12 +127,13 @@
           <div class ="result-title" id="cuisine-name"></div>
           <img id='cuisine-pic' src=""/>
           <div>
-            <h3 id = 'cuisine-ing-header'></h3>
-            <ul id = 'cuisine-ing'></ul>
+            <h3 class ="result-header" id = 'cuisine-ing-header'></h3>
+            <ul class="ing" id = 'cuisine-ing'></ul>
           </div>
+          <hr>
           <div>
-            <h3 id = 'cuisine-directions';></h3>
-            <div id = "cuisine-inst"></div>
+            <h3 class ="result-header" id = 'cuisine-directions';></h3>
+            <div class="ing" id = "cuisine-inst"></div>
           </div>
         </div>
 

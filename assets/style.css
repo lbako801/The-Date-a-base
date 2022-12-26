@@ -28,17 +28,17 @@ background-color: #040404;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
   line-height: 40px;
-  width: 95vw;
   text-shadow: 2px 3px 13px #53a330;
 }
 
 span {
   color: red;
   padding: 10px;
+  text-shadow: 2px 3px 13px red;
 }
 #date-title {
   animation: blink 1s steps(4, start) infinite;
-  font-size: 50px;
+  font-size: 40px;
   padding: 40px;
 }
 @keyframes blink{
@@ -51,7 +51,6 @@ to{
   flex-direction: column;
   flex-wrap: wrap;
   font-family: 'Press Start 2P', cursive;
-  width: 95vw;
   align-items: center;
   justify-content: space-around;
   padding-top: 30px;
@@ -59,37 +58,49 @@ to{
 
 .choice-select {
   border: solid antiquewhite;
-  border-radius: 10px;
-  padding: 30px; 
+  border-radius: 20px;
+  padding:25px; 
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   color: antiquewhite;
-  width:200px
+  width:250px;
+  text-align:center;
 }
 
+.choice-select:hover {
+  border: #49fc03 solid;
+  box-shadow: 2px 3px 13px #53a330;
+  color: #49fc03;
+}
+
+label {
+  padding: 10px;
+}
 .choice-select>select {
   background-color: antiquewhite;
   padding: 10px;
   font-family: 'Press Start 2P', cursive;
-
 }
 
 .choice-select>select>option {
   background-color: antiquewhite;
   font-family: 'Press Start 2P', cursive;
+  border-radius: 20px;
 }
 
 .submit-btn {
   align-items: center;
   justify-items: center;
   padding: 20px;
+  margin: 20px;
 }
 
 .submit-btn>input{
   background-color: #49fc03;
-  border-radius: 10px;
+  border-radius: 80px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 20px;
+  font-size: 15px;
   flex-wrap: wrap;
   padding: 20px;
   box-shadow: 2px 3px 13px #53a330;
@@ -105,32 +116,49 @@ to{
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   color: bisque;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .result-container{
   border: solid white;
   border-radius: 10px;
   margin-top: 30px;
-}
-
-.result-container>img {
-  width: 300px;
-  height: 400px;
-  border-radius: 30px;
+  width: 450px;
 }
 
 .result-title {
   font-family: 'Press Start 2P', cursive;
   padding: 20px;
   font-size: 20px;
-  display: block;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
+.result-container>img {
+  width: 300px;
+  height: auto;
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+}
 
+#movie-desc {
+  width: 300px;
+
+  padding: 20px;
+  text-align: center;
+}
+
+.result-header {
+  text-align: center;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.ing {
+  padding:20px;
+}
