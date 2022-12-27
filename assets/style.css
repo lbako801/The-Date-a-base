@@ -167,26 +167,36 @@
     #movie-desc {
       padding: 20px;
       text-align: center;
-      border-radius: 15px;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 15px;
     }
     
     .result-header {
       text-align: center;
       font-weight: 600;
-      padding: 20px;
+      padding: 10px;
       border-radius: 15px;
     }
     
     .ing {
-      padding:20px;
+      padding:10px;
       border-radius: 15px;
-      font-size: 15px;
+      font-size: 12px;
     }
     #copyright{
       font-family: 'Press Start 2P', cursive;
       color: red;
       text-align: center;
       margin-top: 100px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    #copyright:hover {
+      color: #49fc03;
+      cursor: pointer;
     }
 }
 
@@ -374,6 +384,7 @@
       justify-content: center;
       align-content:center;
       margin-top: 100px;
+      margin-bottom: 20px;
       text-decoration: none;
     }
 
