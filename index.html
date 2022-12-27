@@ -1,5 +1,6 @@
 <!DOCTYPE html >
 <html class="has-background-dark" lang="en">
+  
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,139 +14,140 @@
   </head>
 
   <body>
-        <!-- Website Title Section -->
-        <div class="main-title" >
-          <h1 id="date-title">Date-A-Base</h1>
-          <p>Time to <span>SPICE</span> up your date nights!</p>
-          <p>>> Select options to start! <<</p>
-        </div>
-      <!-- Dropdown Selectors for Movie/Drink/Meal -->
-      <form id="choices" class="container">
+          <!-- Website Title Section -->
+          <div class="main-title" >
+            <h1 id="date-title">Date-A-Base</h1>
+            <p>Time to <span>SPICE</span> up your date nights!</p>
+            <p>>> Select options to start! <<</p>
+          </div>
+        <!-- Dropdown Selectors for Movie/Drink/Meal -->
+        <form id="choices" class="container">
+            <div class="choice-select">
+                    <label for="movie-genres">-GENRE-</label>
+                    <select id="genre-list" name="genres" class="dropdown-content">
+                        <option class="genreOption" value="16">Animation</option>
+                        <option class="genreOption" value="28">Action</option>
+                        <option class="genreOption" value="12">Adventure</option>
+                        <option class="genreOption" value="35">Comedy</option>
+                        <option class="genreOption" value="80">Crime</option>
+                        <option class="genreOption" value="18">Drama</option>
+                        <option class="genreOption" value="99">Documentary</option>
+                        <option class="genreOption" value="14">Fantasy</option>
+                        <option class="genreOption" value="36">Historical</option>
+                        <option class="genreOption" value="27">Horror</option>
+                        <option class="genreOption" value="10402">Musical</option>
+                        <option class="genreOption" value="9648">Mystery</option>
+                        <option class="genreOption" value="10749">Romance</option>
+                        <option class="genreOption" value="878">Sci-Fi</option>
+                        <option class="genreOption" value="53">Thriller</option>
+                        <option class="genreOption" value="10752">War</option>
+                        <option class="genreOption" value="37">Western</option>
+                    </select>
+            </div>
+
           <div class="choice-select">
-                  <label for="movie-genres">-GENRE-</label>
-                  <select id="genre-list" name="genres" class="dropdown-content">
-                      <option class="genreOption" value="16">Animation</option>
-                      <option class="genreOption" value="28">Action</option>
-                      <option class="genreOption" value="12">Adventure</option>
-                      <option class="genreOption" value="35">Comedy</option>
-                      <option class="genreOption" value="80">Crime</option>
-                      <option class="genreOption" value="18">Drama</option>
-                      <option class="genreOption" value="99">Documentary</option>
-                      <option class="genreOption" value="14">Fantasy</option>
-                      <option class="genreOption" value="36">Historical</option>
-                      <option class="genreOption" value="27">Horror</option>
-                      <option class="genreOption" value="10402">Musical</option>
-                      <option class="genreOption" value="9648">Mystery</option>
-                      <option class="genreOption" value="10749">Romance</option>
-                      <option class="genreOption" value="878">Sci-Fi</option>
-                      <option class="genreOption" value="53">Thriller</option>
-                      <option class="genreOption" value="10752">War</option>
-                      <option class="genreOption" value="37">Western</option>
+                <label for="alcoholic-beverages">-DRINK-</label>
+                  <select id="drinks" name="drinks" class="dropdown-content">
+                    <option class="drinkOption" value="Amaretto">Amaretto</option>
+                    <option class="drinkOption" value="Bourbon">Bourbon</option>
+                    <option class="drinkOption" value="Brandy">Brandy</option>
+                    <option class="drinkOption" value="Champagne">Champagne</option>
+                    <option class="drinkOption" value="Cognac">Cognac</option>
+                    <option class="drinkOption" value="Everclear">Everclear</option>
+                    <option class="drinkOption" value="Gin">Gin</option>
+                    <option class="drinkOption" value="Rum">Rum</option>
+                    <option class="drinkOption" value="Scotch">Scotch</option>
+                    <option class="drinkOption" value="Spiced Rum">Spiced Rum</option>
+                    <option class="drinkOption" value="Tequila">Tequila</option>
+                    <option class="drinkOption" value="Vodka">Vodka</option>
+                    <option class="drinkOption" value="Whiskey">Whiskey</option>
                   </select>
           </div>
 
-        <div class="choice-select">
-              <label for="alcoholic-beverages">-DRINK-</label>
-                <select id="drinks" name="drinks" class="dropdown-content">
-                  <option class="drinkOption" value="Amaretto">Amaretto</option>
-                  <option class="drinkOption" value="Bourbon">Bourbon</option>
-                  <option class="drinkOption" value="Brandy">Brandy</option>
-                  <option class="drinkOption" value="Champagne">Champagne</option>
-                  <option class="drinkOption" value="Cognac">Cognac</option>
-                  <option class="drinkOption" value="Everclear">Everclear</option>
-                  <option class="drinkOption" value="Gin">Gin</option>
-                  <option class="drinkOption" value="Rum">Rum</option>
-                  <option class="drinkOption" value="Scotch">Scotch</option>
-                  <option class="drinkOption" value="Spiced Rum">Spiced Rum</option>
-                  <option class="drinkOption" value="Tequila">Tequila</option>
-                  <option class="drinkOption" value="Vodka">Vodka</option>
-                  <option class="drinkOption" value="Whiskey">Whiskey</option>
+          <div class="choice-select">
+                  <label for="cuisines">-CUISINE-</label>
+                  <select id="cuisines" name="cuisines" class="dropdown-content">
+                    <option class="cuisineOption" value="American">American</option>
+                    <option class="cuisineOption" value="British">British</option>
+                    <option class="cuisineOption" value="Canadian">Canadian</option>
+                    <option class="cuisineOption" value="Chinese">Chinese</option>
+                    <option class="cuisineOption" value="Croatian">Croatian</option>
+                    <option class="cuisineOption" value="Dutch">Dutch</option>
+                    <option class="cuisineOption" value="Egyptian">Egyptian</option>
+                    <option class="cuisineOption" value="French">French</option>
+                    <option class="cuisineOption" value="Greek">Greek</option>
+                    <option class="cuisineOption" value="Indian">Indian</option>
+                    <option class="cuisineOption" value="Irish">Irish</option>
+                    <option class="cuisineOption" value="Italian">Italian</option>
+                    <option class="cuisineOption" value="Jamaican">Jamaican</option>
+                    <option class="cuisineOption" value="Japanese">Japanese</option>
+                    <option class="cuisineOption" value="Kenyan">Kenyan</option>
+                    <option class="cuisineOption" value="Malaysian">Malaysian</option>
+                    <option class="cuisineOption" value="Mexican">Mexican</option>
+                    <option class="cuisineOption" value="Moroccan">Moroccan</option>
+                    <option class="cuisineOption" value="Polish">Polish</option>
+                    <option class="cuisineOption" value="Portuguese">Portuguese</option>
+                    <option class="cuisineOption" value="Russian">Russian</option>
+                    <option class="cuisineOption" value="Spanish">Spanish</option>
+                    <option class="cuisineOption" value="Thai">Thai</option>
+                    <option class="cuisineOption" value="Tunisian">Tunisian</option>
+                    <option class="cuisineOption" value="Turkish">Turkish</option>
+                    <option class="cuisineOption" value="Unknown">Unknown</option>
+                    <option class="cuisineOption" value="Vietnamese">Vietnamese</option>
                 </select>
-        </div>
+          </div>
 
-        <div class="choice-select">
-                <label for="cuisines">-CUISINE-</label>
-                <select id="cuisines" name="cuisines" class="dropdown-content">
-                  <option class="cuisineOption" value="American">American</option>
-                  <option class="cuisineOption" value="British">British</option>
-                  <option class="cuisineOption" value="Canadian">Canadian</option>
-                  <option class="cuisineOption" value="Chinese">Chinese</option>
-                  <option class="cuisineOption" value="Croatian">Croatian</option>
-                  <option class="cuisineOption" value="Dutch">Dutch</option>
-                  <option class="cuisineOption" value="Egyptian">Egyptian</option>
-                  <option class="cuisineOption" value="French">French</option>
-                  <option class="cuisineOption" value="Greek">Greek</option>
-                  <option class="cuisineOption" value="Indian">Indian</option>
-                  <option class="cuisineOption" value="Irish">Irish</option>
-                  <option class="cuisineOption" value="Italian">Italian</option>
-                  <option class="cuisineOption" value="Jamaican">Jamaican</option>
-                  <option class="cuisineOption" value="Japanese">Japanese</option>
-                  <option class="cuisineOption" value="Kenyan">Kenyan</option>
-                  <option class="cuisineOption" value="Malaysian">Malaysian</option>
-                  <option class="cuisineOption" value="Mexican">Mexican</option>
-                  <option class="cuisineOption" value="Moroccan">Moroccan</option>
-                  <option class="cuisineOption" value="Polish">Polish</option>
-                  <option class="cuisineOption" value="Portuguese">Portuguese</option>
-                  <option class="cuisineOption" value="Russian">Russian</option>
-                  <option class="cuisineOption" value="Spanish">Spanish</option>
-                  <option class="cuisineOption" value="Thai">Thai</option>
-                  <option class="cuisineOption" value="Tunisian">Tunisian</option>
-                  <option class="cuisineOption" value="Turkish">Turkish</option>
-                  <option class="cuisineOption" value="Unknown">Unknown</option>
-                  <option class="cuisineOption" value="Vietnamese">Vietnamese</option>
-              </select>
-        </div>
-
-        <div class="submit-btn">
-          <input type="submit"/>
-        </div>
-        
-      </form>
+          <div class="submit-btn">
+            <input type="submit"/>
+          </div>
           
-  <div class="main-container">
-      <section id = "result-boxes">
-      <!-- HTML for Movie -->
-        <div class="result-container">
-            <div class ="result-title" id ="movie-title"></div>
-            <img id="movie-pic" src=""/>
+        </form>
+            
+    <div class="main-container">
+        <section id = "result-boxes">
+        <!-- HTML for Movie -->
+          <div class="result-container">
+              <div class ="result-title" id ="movie-title"></div>
+              <img id="movie-pic" src=""/>
+              <hr>
+              <div id="movie-desc"></div>
+          </div>
+        <!-- HTML for Drink -->
+          <div class="result-container">
+            <div class ="result-title" id="drink-name"></div>
+            <img id="drink-pic" src=""/>
             <hr>
-            <div id="movie-desc"></div>
-        </div>
-      <!-- HTML for Drink -->
-        <div class="result-container">
-          <div class ="result-title" id="drink-name"></div>
-          <img id="drink-pic" src=""/>
-          <hr>
-            <h3 class ="result-header" id="drink-ing-header"></h3>
-            <ul class="ing" id="drink-ing"></ul>
+              <h3 class ="result-header" id="drink-ing-header"></h3>
+              <ul class="ing" id="drink-ing"></ul>
+              <hr>
+            <div>
+              <h3 class = "result-header" id ="drink-directions"></h3>
+              <div class="ing" id="drink-inst"></div>
+            </div>
+          </div>
+        <!-- HTML for Meal -->
+          <div class="result-container">
+            <div class ="result-title" id="cuisine-name"></div>
+            <img id='cuisine-pic' src=""/>
             <hr>
-          <div>
-            <h3 class = "result-header" id ="drink-directions"></h3>
-            <div class="ing" id="drink-inst"></div>
+            <div>
+              <h3 class ="result-header" id = 'cuisine-ing-header'></h3>
+              <ul class="ing" id = 'cuisine-ing'></ul>
+            </div>
+            <hr>
+            <div>
+              <h3 class ="result-header" id = 'cuisine-directions';></h3>
+              <div class="ing" id = "cuisine-inst"></div>
+            </div>
           </div>
-        </div>
-      <!-- HTML for Meal -->
-        <div class="result-container">
-          <div class ="result-title" id="cuisine-name"></div>
-          <img id='cuisine-pic' src=""/>
-          <hr>
-          <div>
-            <h3 class ="result-header" id = 'cuisine-ing-header'></h3>
-            <ul class="ing" id = 'cuisine-ing'></ul>
-          </div>
-          <hr>
-          <div>
-            <h3 class ="result-header" id = 'cuisine-directions';></h3>
-            <div class="ing" id = "cuisine-inst"></div>
-          </div>
-        </div>
 
-      </section>
-  </div>
+        </section>
+    </div>
+    <a id="copyright" href="https://lbako801.github.io/Loren-Official-Website/" target="_blank"> LOREN BAKO 2022 &copy;</a>
   </body>
 
   <script src="./assets/script.js"></script>
 
-  </html>
+</html>
 
-<!-- HTML layout by LOREN BAKO (Github - lbako801) -->
+<!-- HTML layout by LOREN BAKO (Github - lbako801) enjoy :) --> 
