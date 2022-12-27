@@ -9,5 +9,5 @@ Can get movie, dinner recipe, and drink recipe recommendations from our chosen p
 ### Links
 [deployed-page](https://lbako801.github.io/The-Date-a-base/)
 ### Screenshots
-![screenshot](./assets/images/homepage.png)
+![screenshot](./assets/images/date-a-base-sceenshot.png)
 ![screenshot](./assets/images/scrcp2.jpg)
