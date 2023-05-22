@@ -1,57 +1,395 @@
-.container-zero {
-  display: flex;
-  justify-content: center;
-  align-content: center;
+/* VANILLA CSS ALL DONE BY LOREN BAKO (Github - lbako801 Website - lorenbako.com) enjoy :)*/
+
+@media screen and (max-width:699px) {
+  
+  * {
+    background-color: #040404;
+    }
+    
+    /*STYLING FOR SCROLLBAR*/
+    
+    ::-webkit-scrollbar {
+      width: 0.35rem;
+    }
+    
+    /*SCROLL TRACK*/
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #131313;
+      border-radius: 10px;
+    }
+    
+    /*SCROLL THUMB*/
+    ::-webkit-scrollbar-thumb {
+      background: #49fc03;
+      border-radius:5px;
+    }
+    
+    .main-title {
+      padding-top: 40px;
+      color:#49fc03;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Press Start 2P', cursive;
+      line-height: 40px;
+      text-shadow: 2px 3px 13px #53a330;
+     
+    }
+    
+    .main-title>p{
+      font-size: 10px;
+    }
+    span {
+      color: red;
+      padding: 10px;
+      text-shadow: 2px 3px 13px red;
+    }
+    #date-title {
+      animation: blink 1s steps(4, start) infinite;
+      font-size: 25px;
+    }
+    @keyframes blink{
+    to{
+      visibility: hidden}
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-family: 'Press Start 2P', cursive;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 30px;
+    }
+    
+    .choice-select {
+      border: solid antiquewhite;
+      border-radius: 20px;
+      padding:25px; 
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      color: antiquewhite;
+      width:300px;
+      text-align:center;
+    }
+    
+    .choice-select:hover {
+      border: #49fc03 solid;
+      box-shadow: 2px 3px 13px #53a330;
+      color: #49fc03;
+    }
+    
+    label {
+      padding: 10px;
+    }
+    
+    .choice-select>select {
+      background-color: antiquewhite;
+      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+    }
+    
+    .choice-select>select>option {
+      background-color: antiquewhite;
+      font-family: 'Press Start 2P', cursive;
+      border-radius: 20px;
+    }
+    
+    .submit-btn {
+      align-items: center;
+      justify-items: center;
+      padding: 20px;
+      margin: 20px;
+    }
+    
+    .submit-btn>input{
+      background-color: #49fc03;
+      border-radius: 40px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 15px;
+      flex-wrap: wrap;
+      padding: 20px;
+      box-shadow: 2px 3px 13px #53a330;
+      border: #49fc03 solid;
+      box-sizing: border-box;
+      
+    }
+    
+    .submit-btn>input:hover {
+      cursor: pointer;
+      font-size: 15px;
+      box-shadow: 1px 9px 23px #53a330;
+    }
+    
+    .main-container {
+      color: bisque;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 35px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      
+    }
+    
+    .result-container{
+      border: solid bisque 5px;
+      border-radius: 15px;
+      margin-top: 30px;
+      width: 300px;
+    }
+    
+    .result-title {
+      font-family: 'Press Start 2P', cursive;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
+    
+    .result-container>img {
+      width: 250px;
+      height: auto;
+      border-radius: 45px;
+      text-align: center;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 25px;
+      border: bisque solid 4px;
+      box-sizing: border-box;
+    }
+    
+    #movie-desc {
+      padding: 20px;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: 500;
+      font-size: 15px;
+    }
+    
+    .result-header {
+      text-align: center;
+      font-weight: 600;
+      padding: 10px;
+      border-radius: 15px;
+    }
+    
+    .ing {
+      padding:10px;
+      border-radius: 15px;
+      font-size: 12px;
+    }
+    #copyright{
+      font-family: 'Press Start 2P', cursive;
+      color: red;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    #copyright:hover {
+      color: #49fc03;
+      cursor: pointer;
+    }
 }
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-
-}
-.images {
-    width: 40vw;
-    height: auto;
-}
-  .container-two {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
 
-  .color-one {
-    background-color: #CE0F35;
-    color: #ffffff;
+@media screen and (min-width:700px){
+  * {
+    background-color: #040404;
+    }
+    
+    /*STYLING FOR SCROLLBAR*/
+    
+    ::-webkit-scrollbar {
+      width: 0.35rem;
+    }
+    
+    /*SCROLL TRACK*/
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #131313;
+      border-radius: 10px;
+    }
+    
+    /*SCROLL THUMB*/
+    ::-webkit-scrollbar-thumb {
+      background: #49fc03;
+      border-radius:5px;
+    }
+    
+    .main-title {
+      padding-top: 40px;
+      color:#49fc03;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Press Start 2P', cursive;
+      line-height: 40px;
+      text-shadow: 2px 3px 13px #53a330;
+    }
+    
+    span {
+      color: red;
+      padding: 10px;
+      text-shadow: 2px 3px 13px red;
+    }
+    #date-title {
+      animation: blink 1s steps(4, start) infinite;
+      font-size: 40px;
+      padding: 40px;
+    }
+    @keyframes blink{
+    to{
+      visibility: hidden}
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      font-family: 'Press Start 2P', cursive;
+      align-items: center;
+      justify-content: space-around;
+      padding-top: 30px;
+    }
+    
+    .choice-select {
+      border: solid antiquewhite;
+      border-radius: 20px;
+      padding:25px; 
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      color: antiquewhite;
+      width:450px;
+      text-align:center;
+    }
+    
+    .choice-select:hover {
+      border: #49fc03 solid;
+      box-shadow: 2px 3px 13px #53a330;
+      color: #49fc03;
+    }
+    
+    label {
+      padding: 10px;
+    }
+    
+    .choice-select>select {
+      background-color: antiquewhite;
+      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+    }
+    
+    .choice-select>select>option {
+      background-color: antiquewhite;
+      font-family: 'Press Start 2P', cursive;
+      border-radius: 20px;
+    }
+    
+    .submit-btn {
+      align-items: center;
+      justify-items: center;
+      padding: 20px;
+      margin: 20px;
+    }
+    
+    .submit-btn>input{
+      background-color: #49fc03;
+      border-radius: 80px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 15px;
+      flex-wrap: wrap;
+      padding: 20px;
+      box-shadow: 2px 3px 13px #53a330;
+      border: #49fc03 solid;
+      box-sizing: border-box;
+      
+    }
+    
+    .submit-btn>input:hover {
+      cursor: pointer;
+      font-size: 25px;
+      box-shadow: 1px 9px 23px #53a330;
+    }
+    
+    .main-container {
+      color: bisque;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .result-container{
+      border: solid bisque 5px;
+      border-radius: 15px;
+      margin-top: 30px;
+      width: 650px;
+    }
+    
+    .result-title {
+      font-family: 'Press Start 2P', cursive;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
+    
+    .result-container>img {
+      width: 400px;
+      height: auto;
+      border-radius: 45px;
+      text-align: center;
+      margin-left: 125px;
+      margin-right: 125px;
+      margin-bottom: 25px;
+      border: bisque solid 4px;
+    }
+    
+    #movie-desc {
+      padding: 20px;
+      text-align: center;
+      border-radius: 15px;
+    }
+    
+    .result-header {
+      text-align: center;
+      font-weight: 600;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    
+    .ing {
+      padding:20px;
+      border-radius: 15px;
+    }
 
-  }
-  .color-two {
-    background-color: #E5F4E3;
-    color: #272932;
-  }
+    #copyright{
+      font-family: 'Press Start 2P', cursive;
+      color: red;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content:center;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
 
-  .color-three {
-    background-color: #5da9e9;
-    color: #272932;
-  }
-
-  .submit-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-  }
-
-@media all and (max-width: 768px) {
-  .container {display: flex; flex-direction: column; justify-content: center; align-content: center; text-align: center;}
-}
-
-h3 {
-  font-weight: bolder;
-}
-
-.enable-line-break {
-  white-space: pre-wrap;
+    #copyright:hover {
+      color: #49fc03;
+      cursor: pointer;
+    }
 }
